@@ -1,0 +1,3 @@
+* A listener from sockets to handlers.
+
+This program is designed to sit on a machine instance and listen to every port on the primary interface, passing traffic to services and logging or dispatching firewall response on unserviced ports. An inetd for every possible protocol.
