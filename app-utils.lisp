@@ -1,10 +1,5 @@
 ;; -*-lisp-*-
 
-(defpackage :tesseract.app-utils
-  (:use :cl)
-  (:export :internal-disable-debugger)
-  (:export :internal-quit))
-
 (in-package :tesseract.app-utils)
   
 (defun internal-disable-debugger ()

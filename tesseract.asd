@@ -5,13 +5,12 @@
   :description "The protocol/server component of the user agent software stack."
   :author "Brian O'Reilly <fade@deepsky.com>"
   :license "Modified BSD License"
-  :serial t
+  ;; :serial t
   :depends-on (:IOLIB
                :CL-LOG
                :CL-PPCRE
-               ;; #+sbcl
-               ;; :SB-CONCURRENCY
                :ALEXANDRIA
+               :SB-CONCURRENCY
                :OPTIMA
                :RUTILS
                :DRAKMA
@@ -20,6 +19,8 @@
                :CHANL
                :ZEROMQ)
   :pathname "./"
-  :components ((:file "app-utils")
-               (:file "tesseract")))
+  :components ((:file "packages")
+               (:file "app-utils" :depends-on ("packages"))
+               (:file "dispatcher-buffer" :depends-on ("packages"))
+               (:file "tesseract" :depends-on ("dispatcher-buffer" "packages"))))
 

@@ -15,3 +15,6 @@
 *.sx32fsl
 *.wx64fsl
 *.wx32fsl
+/buildapp
+/quicklisp-manifest.txt
+/tesseract
